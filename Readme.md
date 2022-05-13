@@ -5,7 +5,7 @@ Stacks
 
 > Frontend [ Next Js com Typescript ]
 
-> Database [ Postgresql com Typeorm Redis { para cache } ]
+> Database [ Postgresql com Typeorm e Redis { para cache } ]
 
 > Texts API [ INSOMNIA ou POSTMAN ]
 
