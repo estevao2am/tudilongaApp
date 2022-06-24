@@ -5,15 +5,15 @@ import { getRepository } from "typeorm";
 import { UserRepository } from "../repositories";
 
 type UserRequest = {
-  username: string;
+  email: string;
   password: string;
 };
 
 export class SessionService {
-  async execute({ username, password }: UserRequest) {
+  async execute({ email, password }: UserRequest) {
     const repo = UserRepository();
 
-    const user = await repo.findOne({ username });
+    const user = await repo.findOne({ email });
 
     if (!user) {
       return new Error("User does not exists!");

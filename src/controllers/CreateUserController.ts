@@ -3,10 +3,10 @@ import { CreateUserService } from "../services/CreateUserService";
 
 export class CreateUserController {
   async handle(request: Request, response: Response) {
-    const {name, username, password } = request.body;
+    const {username,provincia,name,email, bairro,data_nascimento,phone,password } = request.body;
 
     const createUserService = new CreateUserService();
-    const result = await createUserService.execute({name,username, password });
+    const result = await createUserService.execute({provincia,username,name,email, bairro,data_nascimento,phone,password });
 
     if (result instanceof Error) {
       return response.status(400).json(result.message);

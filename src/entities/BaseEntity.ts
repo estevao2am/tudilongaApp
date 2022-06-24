@@ -1,4 +1,4 @@
-import { PrimaryColumn, CreateDateColumn } from "typeorm";
+import { PrimaryColumn, CreateDateColumn, UpdateDateColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
 
 export class BaseEntity {
@@ -7,6 +7,7 @@ export class BaseEntity {
 
   @CreateDateColumn()
   created_at: Date;
+
 
   constructor() {
     if (!this.id) {
