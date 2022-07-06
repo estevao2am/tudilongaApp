@@ -44,7 +44,7 @@ routes.get("/turism", new GetAllTurismController().handle);
 routes.post("/turism",multer(multerConfig).single("file"),new CreateTurismController().handle);
 
 // Rotas dos Usuarios Normais
-//routes.post("/normal_user",new CreateNormalUserController().handle);
+//routes.post("/normal_user", new CreateNormalUserController().handle);
 //routes.post("/normal_user_login",new NormalUserSessionController().handle);
 // Lista de todos os usuarios normais do Tudilonga, o admin deve estar logado
 //routes.get("/normal_user",  ensuredAuthenticated(),new GetAllNormalUserController().handle);
