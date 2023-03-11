@@ -4,7 +4,7 @@
   "host": "localhost",
   "username": "postgres",
   "password": "hercules",
-  "database": "tudilonga_data",
+  "database": "finance_db",
   "entities": ["./src/entities/*.ts"],
   "migrations": ["./src/database/migrations/*.ts"],
   "cli": {

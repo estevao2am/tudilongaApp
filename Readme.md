@@ -1,4 +1,4 @@
-# Welcome to tudilonga App
+# Finance App
 
 Stacks
 > Backend [ Node js com Typescript ]

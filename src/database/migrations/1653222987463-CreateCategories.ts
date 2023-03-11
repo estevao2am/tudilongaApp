@@ -22,10 +22,6 @@ export class CreateCategories1653222987463 implements MigrationInterface {
                         name:"description",
                         type:"varchar",
                     },
-                    {
-                        name:"user_id",
-                        type:"uuid"
-                      },
 
                     {
                         name:"created_at",
@@ -38,15 +34,7 @@ export class CreateCategories1653222987463 implements MigrationInterface {
                         type:"timestamp",
                         default:"now()"
                     }
-                ],   foreignKeys: [
-                   
-                    {
-                      name: "fk_user_category",
-                      columnNames: ["user_id"],
-                      referencedTableName: "users",
-                      referencedColumnNames: ["id"],
-                    },
-                  ],
+                ],  
             })
         )
     }

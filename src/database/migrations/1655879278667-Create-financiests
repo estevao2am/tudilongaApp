@@ -5,7 +5,7 @@ export class CreateUser1655879278667 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
           new Table({
-            name: "users",
+            name: "financies",
             columns: [
               {
                 name: "id",
@@ -15,38 +15,24 @@ export class CreateUser1655879278667 implements MigrationInterface {
               {
                 name: "name",
                 type: "varchar",
+                isUnique:true
               },
               {
-                name: "username",
-                type: "varchar",
-                isUnique:true
+                name: "data",
+                type:"date"
               },
     
               {
-                name: "email",
-                type: "varchar",
+                name: "value",
+                type: "decimal",
                 isUnique:true
               },
+           
               {
-                name: "password",
-                type: "varchar",
+                name: "category_id",
+                type: "uuid",
               },
-              {
-                name: "data_nascimento",
-                type: "varchar",
-              },
-              {
-                name: "provincia",
-                type: "varchar",
-              },
-              {
-                name: "bairro",
-                type: "varchar",
-              },
-              {
-                name: "phone",
-                type: "int",
-              },
+          
               {
                 name: "created_at",
                 type: "timestamp",
@@ -60,12 +46,21 @@ export class CreateUser1655879278667 implements MigrationInterface {
               },
     
             ],
+            foreignKeys: [
+                   
+              {
+                name: "fk_financies_category",
+                columnNames: ["category_id"],
+                referencedTableName: "categories",
+                referencedColumnNames: ["id"],
+              },
+            ],
           })
         );
       }
     
       public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("users");
+        await queryRunner.dropTable("financies");
       }
     }
     

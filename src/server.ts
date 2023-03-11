@@ -8,7 +8,6 @@ import cors from "cors"
 const app = express();
 
 app.use(express.json());
-app.use(cors())
 app.use(routes);
 
 app.listen(process.env.API_PORT, () => console.log(`Server Is Started in Port ${process.env.API_PORT}`));
