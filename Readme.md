@@ -9,5 +9,4 @@ Stacks
 
 > Texts API [ INSOMNIA ou POSTMAN ]
 
-<h1> testando o browser </h1>
 
