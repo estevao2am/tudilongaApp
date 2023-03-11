@@ -1,4 +1,4 @@
-## Finance App - using Node js + Typescript with Typeorm
+<h1 align="center"> Finance App - using Node js + Typescript with Typeorm </h1>
 
 
 <div align="center">
